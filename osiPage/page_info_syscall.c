@@ -99,7 +99,6 @@ SYSCALL_DEFINE2(my_syscall, int, pid_input, int, struct_id) {
             vm_area_struct = vm_area_struct->vm_next;
         }
     } else if (struct_id == 1) {
-        struct vm_area_struct *vm_area_struct;
         struct vm_area_struct *next_vm_area_struct = NULL;
         for (vm_area_struct = current->mm->mmap; vm_area_struct != NULL; vm_area_struct = next_vm_area_struct) {
             vm_start = vm_area_struct->vm_start;
